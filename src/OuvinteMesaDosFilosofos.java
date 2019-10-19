@@ -50,21 +50,6 @@ public class OuvinteMesaDosFilosofos implements ActionListener {
 			}
 
 			break;
-
-		case "Encerrar O Jantar Dos Filósofos":
-
-			for (int i = 0; i < filosofos.length; i++) {
-				try {
-					synchronized (filosofos[i]) {
-						filosofos[i].wait();//Não sei se tá certo, porque não tá só colocando as Threads em espera mas a minha janela toda fica parada, pra eu fechar tenho que toda vez encerrar a execução
-					}
-
-				} catch (InterruptedException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-			}
-			break;
 		}
 
 	}
